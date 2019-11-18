@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ <head>
+ <meta charset="UTF-8">
+ <title>Desafio</title>
+
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #8B0000;
+  background: -webkit-linear-gradient(right, #8B0000, #8B0000);
+  background: -moz-linear-gradient(right, #8B0000, #8B0000);
+  background: -o-linear-gradient(right, #8B0000,#8B0000);
+  background: linear-gradient(to left, #8B0000, #8B0000);
+  color: white;
+  font-size: 24px;
+  text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+body {
+  background: 	#696969; 
+  background: -webkit-linear-gradient(right, 	#696969, 	#696969);
+  background: -moz-linear-gradient(right, 	#696969, 	#696969);
+  background: -o-linear-gradient(right, 	#696969,	#696969);
+  background: linear-gradient(to left, 	#696969, 	#696969);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+</style>
+
+    <script>
+        
+        
+        function valida(){
+            var usuario = document.getElementById("user").value;
+            var password = "pinguim";
+            if(password==document.form1.senha.value){
+                 window.alert("Seja bem-vindo, " +usuario+ "!");
+            }else{
+                window.alert("A senha é um animal que vive na Antártida e começa com P...");
+            }
+        }
+    </script>
+ </head>
+ <body>
+        <div class="header">
+                <h1>Banco Fictício</h1>
+              </div>
+        <div class="login-page">
+                <div class="form">
+        <form onsubmit="return valida(this)" method="post" name="form1">		
+
+                <label for="user">Usuário:</label>
+                <input type="text" name="usuario" id="user" placeholder="Informe o usuário" required>
+                <br>
+                <br>
+                <label for="password">Senha:</label>
+                <input type="password" name="senha" id="password" placeholder="Informe a senha" required>
+                <br>
+                <br>
+                <input type="submit" value="Enviar">  
+                <input type="reset" value="Limpar">
+            </form>
+        </div>
+    </div>
+ </body>
+</html>
